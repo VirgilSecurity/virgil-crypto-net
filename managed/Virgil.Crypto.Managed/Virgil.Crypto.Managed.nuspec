@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Virgil.SDK.ManagedCrypto</id>
+    <version>1.0.0-beta</version>
+    <title>Virgil.SDK.ManagedCrypto</title>
+    <authors>Virgil Security, Inc</authors>
+    <owners>Virgil Security, Inc</owners>
+    <description>
+This library implements ICrypto iCrypto interface of Virgil.SDK using Bouncy Castle library and Chaos.NaCL Ed25519/Curve25519 implementation.
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+ Ed25519 public/private keys import/export
+ ECIES encryption/decryption using Curve25519/AES-GCM/SHA384
+ EDDSA signatures
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://virgilsecurity.com/</projectUrl>
+    <iconUrl>https://avatars0.githubusercontent.com/u/9740508</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
+    <copyright>© 2016 Virgil Security, Inc.</copyright>
+    <references></references>
+    <tags>Cryptography, Elliptic Curve, Cross Platform</tags>
+  </metadata>
+</package>

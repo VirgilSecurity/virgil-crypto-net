@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{408779C5-3B96-4EF4-927E-9647EDBBACD5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Virgil.SDK.Cryptography</RootNamespace>
+    <AssemblyName>Virgil.SDK.ManagedCrypto</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Virgil.SDK.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Virgil.SDK.Contracts.1.0.0\lib\portable45-net45+win8+wp8+wpa81\Virgil.SDK.Contracts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ASN1\Models\EncryptedPrivateKey.cs" />
+    <Compile Include="ASN1\Models\Nonce.cs" />
+    <Compile Include="ASN1\Models\PasswordRecipient.cs" />
+    <Compile Include="ASN1\Models\PrivateKey.cs" />
+    <Compile Include="ASN1\Models\PublicKey.cs" />
+    <Compile Include="ASN1\Models\PublicKeyRecipient.cs" />
+    <Compile Include="ASN1\Models\VirgilSign.cs" />
+    <Compile Include="ASN1\Pem.cs" />
+    <Compile Include="ASN1\VirgilIdentifier.cs" />
+    <Compile Include="Crypto\ChunkCipher.cs" />
+    <Compile Include="Crypto\ECIES.cs" />
+    <Compile Include="Crypto\Ed25519\CryptoBytes.cs" />
+    <Compile Include="Crypto\Ed25519\Ed25519.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Array16.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Array8.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\ByteIntegerConverter.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\base.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\base2.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\d.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\d2.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_0.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_1.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_add.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_cmov.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_cswap.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_frombytes.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_invert.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_isnegative.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_isnonzero.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_mul.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_mul121666.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_neg.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_pow22523.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_sq.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_sq2.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_sub.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\fe_tobytes.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\FieldElement.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_add.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_double_scalarmult.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_frombytes.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_madd.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_msub.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_p1p1_to_p2.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_p1p1_to_p3.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_p2_0.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_p2_dbl.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_p3_0.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_p3_dbl.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_p3_tobytes.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_p3_to_cached.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_p3_to_p2.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_precomp_0.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_scalarmult_base.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_sub.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\ge_tobytes.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\GroupElement.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\keypair.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\open.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\scalarmult.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\sc_clamp.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\sc_mul_add.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\sc_reduce.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\sign.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Ed25519Ref10\sqrtm1.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\InternalAssert.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Poly1305Donna.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Salsa\Salsa20.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Salsa\SalsaCore.cs" />
+    <Compile Include="Crypto\Ed25519\Internal\Sha512Internal.cs" />
+    <Compile Include="Crypto\Ed25519\MontgomeryCurve25519.cs" />
+    <Compile Include="Crypto\Ed25519\Sha512.cs" />
+    <Compile Include="Crypto\Ed25519\XSalsa20Poly1305.cs" />
+    <Compile Include="Crypto\Hash.cs" />
+    <Compile Include="Crypto\ManagedCrypto.cs" />
+    <Compile Include="ASN1\Models\EncryptedKeyModel.cs" />
+    <Compile Include="ASN1\Models\Envelope.cs" />
+    <Compile Include="Crypto\Models\BaseKey.cs" />
+    <Compile Include="Crypto\Models\EdPublicKey.cs" />
+    <Compile Include="Crypto\Models\EdPrivateKey.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Crypto\PBKdf2.cs" />
+    <Compile Include="ASN1\VirgilAsn1Parser.cs" />
+    <Compile Include="Crypto\AesUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
