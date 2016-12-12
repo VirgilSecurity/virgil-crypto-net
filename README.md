@@ -5,6 +5,7 @@ This library implements ICrypto interface in Virgil SDK .NET using [Bouncy Castl
 # Installation and usage 
 Nuget location: www.nuget.org/packages/Virgil.SDK.ManagedCrypto
 ```
+Install-Package Virgil.SDK -Pre
 Install-Package Virgil.SDK.ManagedCrypto -Pre
 ```
 # Usage
