@@ -8,7 +8,7 @@ Nuget location: http://www.nuget.org/packages/virgil.sdk.managedcrypto
 Install-Package Virgil.SDK -Pre
 Install-Package Virgil.SDK.ManagedCrypto -Pre
 ```
-Use this crypto with [Virgil SDK](https://github.com/VirgilSecurity/virgil-sdk-net) that will provide your to create an secure application using Virgil Security. 
+Use this crypto with [Virgil SDK](https://github.com/VirgilSecurity/virgil-sdk-net) that will provide your to create an secure application using Virgil Security services.
 
 # Usage
 The `ManagedCrypto` class provides cryptographic operations in applications, such as hashing, signature generation and verification, and encryption and decryption.
