@@ -9,6 +9,7 @@ Install-Package Virgil.SDK -Pre
 Install-Package Virgil.SDK.ManagedCrypto -Pre
 ```
 # Usage
+The VirgilCrypto class provides cryptographic operations in applications, such as hashing, signature generation and verification, and encryption and decryption.
 
 ```csharp
 var crypto = new ManagedCrypto();
