@@ -56,33 +56,31 @@ var alice = crypto.GenerateKeys();
 ### Encrypt Data
 
 The `crypto.Encrypt` method requires two parameters:
-- **data** - The data to be encrypted as a Buffer
-- **recipients** - Public key or an array of public keys to encrypt the data with
+- **data** - The data to be encrypted as a `byte[]`
+- **recipients** - Public key or an array of Public keys to encrypt the data with
 
 ```csharp
 var plaintext = Encoding.UTF8.GetBytes("Nice and easy");
-
 var cipherData = crypto.Encrypt(plaintext, alice.PublicKey);
 ```
 
 ### Decrypt Data
 
 The `crypto.Decrypt` method requires two parameters:
-- **cipherData** - Encrypted data as a Buffer
-- **privateKey** - The private key to decrypt with
+- **cipherData** - Encrypted data as a `byte[]`
+- **privateKey** - The Private key to decrypt with
 
 ```javascript
 var decryptedData = crypto.Decrypt(cipherData, alice.PrivateKey);
 ```
 
 ## Signatures
-This section walks you through the steps necessary to use the `Crypto` to generate a digital signature for data and to verify that a signature is authentic. 
+This section walks you through the steps necessary to use the `crypto` to generate a digital signature for data and to verify that a signature is authentic. 
 
 Generate a new Public/Private keypair and *data* to be signed.
 
 ```javascript
 var alice = crypto.GenerateKeys();
-
 var data = Encoding.UTF8.GetBytes("Hello Bob, How are you?");
 ```
 
@@ -133,7 +131,7 @@ var decryptedData = crypto.DecryptThenVerify(cipherData, bob.PrivateKey, alice.P
 The default algorithm for Fingerprint generation is SHA-256.
 ```csharp
 var content = Encoding.UTF8.GetBytes("CONTENT_TO_CALCULATE_FINGERPRINT_OF");
-var fingerprint = virgil.crypto.calculateFingerprint(content);
+var fingerprint = crypto.CalculateFingerprint(content);
 ```
 
 
